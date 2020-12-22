@@ -162,6 +162,7 @@
 			attributes = {
 				CLASSPREFIX = EST;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "East Studios Oy";
 			};
 			buildConfigurationList = A73240192591DE6500DEC29B /* Build configuration list for PBXProject "TopoMaps" */;
 			compatibilityVersion = "Xcode 3.2";

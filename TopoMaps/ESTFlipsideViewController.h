@@ -3,7 +3,7 @@
 //  TopoMaps
 //
 //  Created by Oliver Kulpakko on 12/22/20.
-//  Copyright (c) 2020 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2020 East Studios Oy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
