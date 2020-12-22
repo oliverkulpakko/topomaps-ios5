@@ -88,12 +88,7 @@
 			children = (
 				A73240322591DE6600DEC29B /* ESTAppDelegate.h */,
 				A73240332591DE6600DEC29B /* ESTAppDelegate.m */,
-				A73240352591DE6600DEC29B /* ESTMainViewController.h */,
-				A73240362591DE6600DEC29B /* ESTMainViewController.m */,
-				A73240382591DE6600DEC29B /* ESTFlipsideViewController.h */,
-				A73240392591DE6600DEC29B /* ESTFlipsideViewController.m */,
-				A732403B2591DE6600DEC29B /* ESTMainViewController.xib */,
-				A732403E2591DE6600DEC29B /* ESTFlipsideViewController.xib */,
+				A73240482591DED200DEC29B /* View */,
 				A732402A2591DE6600DEC29B /* Supporting Files */,
 			);
 			path = TopoMaps;
@@ -108,6 +103,35 @@
 				A73240312591DE6600DEC29B /* TopoMaps-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A73240482591DED200DEC29B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A73240492591DEDD00DEC29B /* Map */,
+				A732404A2591DEE700DEC29B /* About */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A73240492591DEDD00DEC29B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A73240352591DE6600DEC29B /* ESTMainViewController.h */,
+				A73240362591DE6600DEC29B /* ESTMainViewController.m */,
+				A732403B2591DE6600DEC29B /* ESTMainViewController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		A732404A2591DEE700DEC29B /* About */ = {
+			isa = PBXGroup;
+			children = (
+				A73240382591DE6600DEC29B /* ESTFlipsideViewController.h */,
+				A73240392591DE6600DEC29B /* ESTFlipsideViewController.m */,
+				A732403E2591DE6600DEC29B /* ESTFlipsideViewController.xib */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
