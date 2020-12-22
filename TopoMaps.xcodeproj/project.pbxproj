@@ -18,6 +18,8 @@
 		A732403D2591DE6600DEC29B /* ESTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732403B2591DE6600DEC29B /* ESTMainViewController.xib */; };
 		A73240402591DE6600DEC29B /* ESTFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732403E2591DE6600DEC29B /* ESTFlipsideViewController.xib */; };
 		A73240472591DE9D00DEC29B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73240462591DE9D00DEC29B /* MapKit.framework */; };
+		A73240512591E38300DEC29B /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A732404D2591DF8200DEC29B /* TileOverlay.m */; };
+		A73240522591E38300DEC29B /* TileOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A732404F2591DF8200DEC29B /* TileOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		A732403C2591DE6600DEC29B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ESTMainViewController.xib; sourceTree = "<group>"; };
 		A732403F2591DE6600DEC29B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ESTFlipsideViewController.xib; sourceTree = "<group>"; };
 		A73240462591DE9D00DEC29B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A732404C2591DF8200DEC29B /* TileOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileOverlay.h; sourceTree = "<group>"; };
+		A732404D2591DF8200DEC29B /* TileOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileOverlay.m; sourceTree = "<group>"; };
+		A732404E2591DF8200DEC29B /* TileOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileOverlayView.h; sourceTree = "<group>"; };
+		A732404F2591DF8200DEC29B /* TileOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 				A73240322591DE6600DEC29B /* ESTAppDelegate.h */,
 				A73240332591DE6600DEC29B /* ESTAppDelegate.m */,
 				A73240482591DED200DEC29B /* View */,
+				A732404B2591DF6B00DEC29B /* Utilities */,
 				A732402A2591DE6600DEC29B /* Supporting Files */,
 			);
 			path = TopoMaps;
@@ -132,6 +139,25 @@
 				A732403E2591DE6600DEC29B /* ESTFlipsideViewController.xib */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		A732404B2591DF6B00DEC29B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A73240502591DF8400DEC29B /* TileOverlay */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A73240502591DF8400DEC29B /* TileOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				A732404C2591DF8200DEC29B /* TileOverlay.h */,
+				A732404D2591DF8200DEC29B /* TileOverlay.m */,
+				A732404E2591DF8200DEC29B /* TileOverlayView.h */,
+				A732404F2591DF8200DEC29B /* TileOverlayView.m */,
+			);
+			name = TileOverlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +229,8 @@
 				A73240342591DE6600DEC29B /* ESTAppDelegate.m in Sources */,
 				A73240372591DE6600DEC29B /* ESTMainViewController.m in Sources */,
 				A732403A2591DE6600DEC29B /* ESTFlipsideViewController.m in Sources */,
+				A73240512591E38300DEC29B /* TileOverlay.m in Sources */,
+				A73240522591E38300DEC29B /* TileOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

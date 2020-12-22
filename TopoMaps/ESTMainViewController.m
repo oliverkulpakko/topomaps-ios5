@@ -7,6 +7,8 @@
 //
 
 #import "ESTMainViewController.h"
+#import "TileOverlay.h"
+#import "TileOverlayView.h"
 
 @interface ESTMainViewController ()
 
@@ -19,7 +21,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    TileOverlay *overlay = [[TileOverlay alloc] initWithUrlTemplate:@"https://tile.openstreetmap.org/{z}/{x}/{y}.png"];
+    [mapView addOverlay:overlay];
+    
+    // zoom in by a factor of two from the rect that contains the bounds
+    // because MapKit always backs up to get to an integral zoom level so
+    // we need to go in one so that we don't end up backed out beyond the
+    // range of the TileOverlay.
+    MKMapRect visibleRect = [mapView mapRectThatFits:overlay.boundingMapRect];
+    visibleRect.size.width /= 2;
+    visibleRect.size.height /= 2;
+    visibleRect.origin.x += visibleRect.size.width / 2;
+    visibleRect.origin.y += visibleRect.size.height / 2;
+    mapView.visibleMapRect = visibleRect;
+    
+    [overlay release]; // map is now keeping track of overlay
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    TileOverlayView *view = [[TileOverlayView alloc] initWithOverlay:overlay];
+    view.tileAlpha = 1;
+    return [view autorelease];
 }
 
 - (void)viewDidUnload
