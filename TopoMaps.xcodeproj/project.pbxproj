@@ -20,6 +20,9 @@
 		A73240472591DE9D00DEC29B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73240462591DE9D00DEC29B /* MapKit.framework */; };
 		A73240512591E38300DEC29B /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A732404D2591DF8200DEC29B /* TileOverlay.m */; };
 		A73240522591E38300DEC29B /* TileOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A732404F2591DF8200DEC29B /* TileOverlayView.m */; };
+		A73240562591EDC600DEC29B /* gps-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A73240542591EDC600DEC29B /* gps-arrow.png */; };
+		A73240572591EDC600DEC29B /* gps-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A73240552591EDC600DEC29B /* gps-arrow@2x.png */; };
+		A73240592591EF2C00DEC29B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73240582591EF2C00DEC29B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		A732404D2591DF8200DEC29B /* TileOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileOverlay.m; sourceTree = "<group>"; };
 		A732404E2591DF8200DEC29B /* TileOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileOverlayView.h; sourceTree = "<group>"; };
 		A732404F2591DF8200DEC29B /* TileOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileOverlayView.m; sourceTree = "<group>"; };
+		A73240542591EDC600DEC29B /* gps-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps-arrow.png"; sourceTree = "<group>"; };
+		A73240552591EDC600DEC29B /* gps-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps-arrow@2x.png"; sourceTree = "<group>"; };
+		A73240582591EF2C00DEC29B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73240592591EF2C00DEC29B /* CoreLocation.framework in Frameworks */,
 				A73240472591DE9D00DEC29B /* MapKit.framework in Frameworks */,
 				A73240242591DE6600DEC29B /* UIKit.framework in Frameworks */,
 				A73240262591DE6600DEC29B /* Foundation.framework in Frameworks */,
@@ -64,7 +71,6 @@
 		A73240142591DE6500DEC29B = {
 			isa = PBXGroup;
 			children = (
-				A73240462591DE9D00DEC29B /* MapKit.framework */,
 				A73240292591DE6600DEC29B /* TopoMaps */,
 				A73240222591DE6600DEC29B /* Frameworks */,
 				A73240202591DE6500DEC29B /* Products */,
@@ -82,6 +88,8 @@
 		A73240222591DE6600DEC29B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A73240582591EF2C00DEC29B /* CoreLocation.framework */,
+				A73240462591DE9D00DEC29B /* MapKit.framework */,
 				A73240232591DE6600DEC29B /* UIKit.framework */,
 				A73240252591DE6600DEC29B /* Foundation.framework */,
 				A73240272591DE6600DEC29B /* CoreGraphics.framework */,
@@ -96,6 +104,7 @@
 				A73240332591DE6600DEC29B /* ESTAppDelegate.m */,
 				A73240482591DED200DEC29B /* View */,
 				A732404B2591DF6B00DEC29B /* Utilities */,
+				A73240532591EDB900DEC29B /* Resources */,
 				A732402A2591DE6600DEC29B /* Supporting Files */,
 			);
 			path = TopoMaps;
@@ -160,6 +169,15 @@
 			name = TileOverlay;
 			sourceTree = "<group>";
 		};
+		A73240532591EDB900DEC29B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A73240542591EDC600DEC29B /* gps-arrow.png */,
+				A73240552591EDC600DEC29B /* gps-arrow@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +233,8 @@
 				A732402E2591DE6600DEC29B /* InfoPlist.strings in Resources */,
 				A732403D2591DE6600DEC29B /* ESTMainViewController.xib in Resources */,
 				A73240402591DE6600DEC29B /* ESTFlipsideViewController.xib in Resources */,
+				A73240562591EDC600DEC29B /* gps-arrow.png in Resources */,
+				A73240572591EDC600DEC29B /* gps-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

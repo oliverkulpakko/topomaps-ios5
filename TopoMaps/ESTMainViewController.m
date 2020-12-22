@@ -11,24 +11,28 @@
 #import "TileOverlayView.h"
 
 @interface ESTMainViewController ()
-
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @end
 
 @implementation ESTMainViewController
 @synthesize mapView;
-
+@synthesize locationButton;
+@synthesize locationManager;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // Location Manager
+    
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager startUpdatingLocation];
+    
+    // Map Overlay
+    
     TileOverlay *overlay = [[TileOverlay alloc] initWithUrlTemplate:@"https://tile.openstreetmap.org/{z}/{x}/{y}.png"];
     [mapView addOverlay:overlay];
     
-    // zoom in by a factor of two from the rect that contains the bounds
-    // because MapKit always backs up to get to an integral zoom level so
-    // we need to go in one so that we don't end up backed out beyond the
-    // range of the TileOverlay.
     MKMapRect visibleRect = [mapView mapRectThatFits:overlay.boundingMapRect];
     visibleRect.size.width /= 2;
     visibleRect.size.height /= 2;
@@ -36,7 +40,7 @@
     visibleRect.origin.y += visibleRect.size.height / 2;
     mapView.visibleMapRect = visibleRect;
     
-    [overlay release]; // map is now keeping track of overlay
+    [overlay release];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
@@ -49,6 +53,7 @@
 - (void)viewDidUnload
 {
     [self setMapView:nil];
+    [self setLocationButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -73,8 +78,13 @@
     [self presentModalViewController:controller animated:YES];
 }
 
+- (IBAction)showLocation:(id)sender {
+    [mapView setRegion:MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05)) animated:YES];
+}
+
 - (void)dealloc {
     [mapView release];
+    [locationButton release];
     [super dealloc];
 }
 @end

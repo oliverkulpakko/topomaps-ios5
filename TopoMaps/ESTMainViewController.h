@@ -12,6 +12,10 @@
 @interface ESTMainViewController : UIViewController <ESTFlipsideViewControllerDelegate>
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *locationButton;
+
+
 - (IBAction)showInfo:(id)sender;
+- (IBAction)showLocation:(id)sender;
 
 @end
