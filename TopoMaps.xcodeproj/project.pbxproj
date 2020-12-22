@@ -17,6 +17,7 @@
 		A732403A2591DE6600DEC29B /* ESTFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73240392591DE6600DEC29B /* ESTFlipsideViewController.m */; };
 		A732403D2591DE6600DEC29B /* ESTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732403B2591DE6600DEC29B /* ESTMainViewController.xib */; };
 		A73240402591DE6600DEC29B /* ESTFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A732403E2591DE6600DEC29B /* ESTFlipsideViewController.xib */; };
+		A73240472591DE9D00DEC29B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73240462591DE9D00DEC29B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +25,19 @@
 		A73240232591DE6600DEC29B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A73240252591DE6600DEC29B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A73240272591DE6600DEC29B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A732402B2591DE6600DEC29B /* TopoMaps-Info.plist */ = {isa = PBXFileReference; path = "TopoMaps-Info.plist"; sourceTree = "<group>"; };
+		A732402B2591DE6600DEC29B /* TopoMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TopoMaps-Info.plist"; sourceTree = "<group>"; };
 		A732402D2591DE6600DEC29B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A732402F2591DE6600DEC29B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A73240312591DE6600DEC29B /* TopoMaps-Prefix.pch */ = {isa = PBXFileReference; path = "TopoMaps-Prefix.pch"; sourceTree = "<group>"; };
-		A73240322591DE6600DEC29B /* ESTAppDelegate.h */ = {isa = PBXFileReference; path = ESTAppDelegate.h; sourceTree = "<group>"; };
+		A73240312591DE6600DEC29B /* TopoMaps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TopoMaps-Prefix.pch"; sourceTree = "<group>"; };
+		A73240322591DE6600DEC29B /* ESTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTAppDelegate.h; sourceTree = "<group>"; };
 		A73240332591DE6600DEC29B /* ESTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTAppDelegate.m; sourceTree = "<group>"; };
-		A73240352591DE6600DEC29B /* ESTMainViewController.h */ = {isa = PBXFileReference; path = ESTMainViewController.h; sourceTree = "<group>"; };
+		A73240352591DE6600DEC29B /* ESTMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTMainViewController.h; sourceTree = "<group>"; };
 		A73240362591DE6600DEC29B /* ESTMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTMainViewController.m; sourceTree = "<group>"; };
-		A73240382591DE6600DEC29B /* ESTFlipsideViewController.h */ = {isa = PBXFileReference; path = ESTFlipsideViewController.h; sourceTree = "<group>"; };
+		A73240382591DE6600DEC29B /* ESTFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTFlipsideViewController.h; sourceTree = "<group>"; };
 		A73240392591DE6600DEC29B /* ESTFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTFlipsideViewController.m; sourceTree = "<group>"; };
 		A732403C2591DE6600DEC29B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ESTMainViewController.xib; sourceTree = "<group>"; };
 		A732403F2591DE6600DEC29B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ESTFlipsideViewController.xib; sourceTree = "<group>"; };
+		A73240462591DE9D00DEC29B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73240472591DE9D00DEC29B /* MapKit.framework in Frameworks */,
 				A73240242591DE6600DEC29B /* UIKit.framework in Frameworks */,
 				A73240262591DE6600DEC29B /* Foundation.framework in Frameworks */,
 				A73240282591DE6600DEC29B /* CoreGraphics.framework in Frameworks */,
@@ -55,6 +58,7 @@
 		A73240142591DE6500DEC29B = {
 			isa = PBXGroup;
 			children = (
+				A73240462591DE9D00DEC29B /* MapKit.framework */,
 				A73240292591DE6600DEC29B /* TopoMaps */,
 				A73240222591DE6600DEC29B /* Frameworks */,
 				A73240202591DE6500DEC29B /* Products */,
@@ -256,6 +260,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TopoMaps/TopoMaps-Prefix.pch";
 				INFOPLIST_FILE = "TopoMaps/TopoMaps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,6 +272,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TopoMaps/TopoMaps-Prefix.pch";
 				INFOPLIST_FILE = "TopoMaps/TopoMaps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

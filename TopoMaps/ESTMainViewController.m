@@ -13,6 +13,7 @@
 @end
 
 @implementation ESTMainViewController
+@synthesize mapView;
 
 
 - (void)viewDidLoad
@@ -23,6 +24,7 @@
 
 - (void)viewDidUnload
 {
+    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -47,4 +49,8 @@
     [self presentModalViewController:controller animated:YES];
 }
 
+- (void)dealloc {
+    [mapView release];
+    [super dealloc];
+}
 @end

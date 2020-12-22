@@ -7,9 +7,11 @@
 //
 
 #import "ESTFlipsideViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface ESTMainViewController : UIViewController <ESTFlipsideViewControllerDelegate>
 
+@property (retain, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)showInfo:(id)sender;
 
 @end
